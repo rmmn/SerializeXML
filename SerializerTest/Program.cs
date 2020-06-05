@@ -7,12 +7,14 @@ namespace SerializerTest
     {
         static void Main(string[] args)
         {
+            // Сздаём обьект класса для сериализации
             Person person = new Person
             {
                 Name = "Joe",
                 Age = 23
             };
 
+            // Создаём объект обобщенного класса
             Serializer<Person> serializeXML = new Serializer<Person>("person", person);
 
             // Сериализация
