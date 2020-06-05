@@ -15,7 +15,7 @@ namespace SerializeXML
         /// Конструктор класса с настройками для сериализации
         /// </summary>
         /// <param name="filename">Имя XML файла</param>
-        /// <param name="model">Класс для сериализации</param>
+        /// <param name="model">Объект класса для сериализации</param>
         public Serializer(string filename, T model)
         {
             this.path = Directory.GetCurrentDirectory();
@@ -30,7 +30,7 @@ namespace SerializeXML
         /// </summary>
         /// <param name="path">Путь сохранения сериализованного файла, по умолчанию - директория расположения данной библиотеки</param>
         /// <param name="filename">Имя XML файла</param>
-        /// <param name="model">Класс для сериализации</param>
+        /// <param name="model">Объект класса для сериализации</param>
         public Serializer(string path, string filename, T model)
         {
             this.path = path;
