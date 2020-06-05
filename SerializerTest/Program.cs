@@ -14,8 +14,14 @@ namespace SerializerTest
                 Age = 23
             };
 
-            // Создаём объект обобщенного класса
+            // Или
+            // Person person = new Person("Joe", 23);
+
+            // Создаём объект обобщенного класса принимающего параметры: имя для файла, объект для сериализации
             Serializer<Person> serializeXML = new Serializer<Person>("person", person);
+
+            // Если нужно указать иной путь для соранения xml-файла
+            // Serializer<Person> serializeXML = new Serializer<Person>("path_to_serialized_xml", "person", person);
 
             // Сериализация
             serializeXML.Serialize();
