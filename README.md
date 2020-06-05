@@ -2,7 +2,7 @@
 
 # Использование
 
-```
+``` C#
 // Сздаём обьект класса для сериализации
 Person person = new Person
 {
@@ -33,7 +33,7 @@ Console.WriteLine($"Имя: {deserializedPerson.Name} \nВозраст: {deseria
 
 По умолчанию сериализованный файл будет соранен в директории библиотеки ```SerializeXML```
 Для указания другого пути нужно вызвать перегрузку конструктора класса ```Serializer```:
-```
+``` C#
 Serializer<Person> serializeXML = new Serializer<Person>("path_to_serialized_xml", "person", person);
 ```
 
@@ -43,7 +43,7 @@ Serializer<Person> serializeXML = new Serializer<Person>("path_to_serialized_xml
 
 Также для сериализации необходимо указать тип
 
-```
+``` C#
 [Serializable]
 public class Person
 {
