@@ -13,8 +13,10 @@ Person person = new Person
 // Или
 // Person person = new Person("Joe", 23);
 
-// Создаём объект обобщенного класса
+// Создаём объект обобщенного класса принимающего параметры: имя для файла, объект для сериализации
 Serializer<Person> serializeXML = new Serializer<Person>("person", person);
+// Если нужно указать иной путь для соранения xml-файла
+// Serializer<Person> serializeXML = new Serializer<Person>("path_to_serialized_xml", "person", person);
 
 // Сериализация
 serializeXML.Serialize();
@@ -27,6 +29,12 @@ Console.WriteLine("\n\n\n");
 Person deserializedPerson = serializeXML.Deserialize();
 Console.WriteLine("Объект десериализован");
 Console.WriteLine($"Имя: {deserializedPerson.Name} \nВозраст: {deserializedPerson.Age}");
+```
+
+По умолчанию сериализованный файл будет соранен в директории библиотеки ```SerializeXML```
+Для указания другого пути нужно вызвать перегрузку конструктора класса ```Serializer```:
+```
+Serializer<Person> serializeXML = new Serializer<Person>("path_to_serialized_xml", "person", person);
 ```
 
 # Класс для сериализации
