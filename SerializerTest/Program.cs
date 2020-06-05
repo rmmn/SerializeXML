@@ -15,11 +15,14 @@ namespace SerializerTest
 
             Serializer<Person> serializeXML = new Serializer<Person>("person", person);
 
+            // Сериализация
             serializeXML.Serialize();
             Console.WriteLine("Объект сериализован");
 
             Console.WriteLine("\n\n\n");
 
+
+            // Десериализация
             Person deserializedPerson = serializeXML.Deserialize();
             Console.WriteLine("Объект десериализован");
             Console.WriteLine($"Имя: {deserializedPerson.Name} \nВозраст: {deserializedPerson.Age}");

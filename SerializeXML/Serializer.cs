@@ -52,7 +52,7 @@ namespace SerializeXML
         /// <summary>
         //// Десериализация объекта
         /// </summary>
-        /// <returns>Класс </returns>
+        /// <returns>Объект класса ${T}</returns>
         public T Deserialize()
         {
             T result;
