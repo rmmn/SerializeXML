@@ -28,7 +28,7 @@ namespace SerializeXML
         /// <summary>
         /// Конструктор класса с настройками для сериализации
         /// </summary>
-        /// <param name="path">Путь сохранения сериализованного файла, по умолчанию - текущая директория</param>
+        /// <param name="path">Путь сохранения сериализованного файла, по умолчанию - директория расположения данной библиотеки</param>
         /// <param name="filename">Имя XML файла</param>
         /// <param name="model">Класс для сериализации</param>
         public Serializer(string path, string filename, T model)
